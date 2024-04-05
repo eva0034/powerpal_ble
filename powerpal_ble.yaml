@@ -54,6 +54,7 @@ sensor:
     pulses_per_kwh: 1000
     time_id: homeassistant_time # daily energy still works without a time_id, but recommended to include one to properly handle daylight savings, etc.
 #    http_request_id: powerpal_cloud_uploader
-#    cost_per_kwh: 0.1872 #dollars per kWh
+#    cost_per_kwh_on_peak: 0.1872 #dollars per kWh On Peak
+#    cost_per_kwh_off)peak: 0.300 #dollars per kWh Off Peak
 #    powerpal_device_id: 0000abcd #optional, component will retrieve from your Powerpal if not set
 #    powerpal_apikey: 4a89e298-b17b-43e7-a0c1-fcd1412e98ef #optional, component will retrieve from your Powerpal if not set
