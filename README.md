@@ -34,7 +34,7 @@ The ESPHome component hasn't been merged into esphome yet, but you can use it vi
 
 ```yaml
 external_components:
-  - source: github://WeekendWarrior1/esphome@powerpal_ble
+  - source: github://eva0034/esphome@powerpal_ble
     # requires ble_client because I had to add some small features to authenticate properly
     components: [ ble_client, powerpal_ble ]
 
@@ -69,13 +69,14 @@ sensor:
     pulses_per_kwh: 1000
     time_id: homeassistant_time # daily energy still works without a time_id, but recommended to include one to properly handle daylight savings, etc.
 #    http_request_id: powerpal_cloud_uploader
-#    cost_per_kwh: 0.20 #dollars per kWh
+#    cost_per_kwh_on_peak: 0.20 #dollars per kWh On Peak
+#    cost_per_kwh_off_peak: 0.20 #dollars per kWh Off Peak
 #    powerpal_device_id: 0000abcd #optional, component will retrieve from your Powerpal if not set
 #    powerpal_apikey: 4a89e298-b17b-43e7-a0c1-fcd1412e98ef #optional, component will retrieve from your Powerpal if not set
 ```
 You can also find a full config here: [powerpal_ble.yaml](powerpal_ble.yaml)
 
-And the component code here: [powerpal_ble ESPHome Component](https://github.com/WeekendWarrior1/esphome/tree/powerpal_ble/esphome/components/powerpal_ble)
+And the component code here: [powerpal_ble ESPHome Component](https://github.com/eva0034/esphome/tree/powerpal_ble/esphome/components/powerpal_ble)
 
 ## Using the Arduino sketch
 This sketch simply prints the timestamp, pulses and energy usage of the updates sent by the Powerpal (the update interval can also be configured).
